@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="binhex_shop_list.list">
+      <field name="name">binhex_shop_list list</field>
+      <field name="model">binhex_shop_list.binhex_shop_list</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="binhex_shop_list.action_window">
+      <field name="name">binhex_shop_list window</field>
+      <field name="res_model">binhex_shop_list.binhex_shop_list</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="binhex_shop_list.action_server">
+      <field name="name">binhex_shop_list server</field>
+      <field name="model_id" ref="model_binhex_shop_list_binhex_shop_list"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="binhex_shop_list" id="binhex_shop_list.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="binhex_shop_list.menu_1" parent="binhex_shop_list.menu_root"/>
+    <menuitem name="Menu 2" id="binhex_shop_list.menu_2" parent="binhex_shop_list.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="binhex_shop_list.menu_1_list" parent="binhex_shop_list.menu_1"
+              action="binhex_shop_list.action_window"/>
+    <menuitem name="Server to list" id="binhex_shop_list" parent="binhex_shop_list.menu_2"
+              action="binhex_shop_list.action_server"/>
+-->
+  </data>
+</odoo>

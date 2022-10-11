@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="shops" name="shops">
+          <t t-call="website.layout">
+              <div id="wrap" class="carlos_danger_13">
+                <div class="oe_structure">
+                    <div class="oe_structure oe_empty" data-name="Style 2" data-editor-message="ARRASTRE BLOQUES AQUÍ"/>
+                    <div class="oe_structure" data-name="Style 1" data-editor-message="ARRASTRE BLOQUES AQUÍ">
+                    <div class="container pt32" data-name="Category Slider">
+                      <h3 class="te_slider_title">Categorías</h3>
+                    </div>
+                    <section class="te_category_slider pb32" style=""/>
+                  </div>
+
+                  <t t-foreach="categories" t-as="c">
+                  <section class="py-3 py-sm-5 te_space_style pt0" data-name="Space"/>
+                  <section class="aos-init zoom-in pb72" data-name="Title" data-aos="zoom-in" t-attf-id="{{c.web_id}}" data-anchor="true">
+                    <div class="container">
+                      <div class="row s_nb_column_fixed">
+                        <div class="col-lg-12 s_title pt16 bg-alpha" style="text-align: center;">
+                          <h4 class="te_s_title_default"><t t-esc="c.name"/></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                    <t t-set="index" t-value="0"/>
+                  <t t-foreach="shops" t-as="s">
+                    <t t-if="s['categoria'] == c.id">
+                    <t t-set="style" t-value="''" />
+                    <t t-if="(index % 2) == 0">
+                      <t t-set="style" t-value="'background-color: rgb(206, 222, 231);'" />
+                    </t>
+                    <section class="zoom-in aos-init" data-name="Title" data-aos="zoom-in">
+                      <div class="container">
+                        <div class="row s_nb_column_fixed"> </div>
+                      </div>
+                    </section>
+                    <section class="aos-init pt0 fade-right pb4" data-name="Style 4" style="" data-aos="fade-right">
+                    <div class="container">
+
+                      <div class="row te_col_6_main">
+                       
+                        <div class="col-sm-6 col-lg-3 aos-init border" data-aos="none" t-att-style="style">
+                          <section class="t_img_hover_1">
+                            <a href="#" data-original-title="" title="" aria-describedby="tooltip934969">
+                              <img class="img img-responsive img-fluid d-block mx-auto" alt="" t-attf-src="{{'/web/image?model=res.partner&amp;id='+str(s['id'])+'&amp;field=image_128&amp;'}}" data-original-title="" title="" aria-describedby="tooltip775951" style="width: 50%;"/>
+                            </a>
+                          </section>
+                        </div>
+                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
+                          <section class="t_img_hover_1 te_img_effect3">
+                            <a href="#" data-original-title="" title="" aria-describedby="tooltip315079">
+                              <br/>
+                            </a>
+                          </section>
+
+                          <section class="te_4_col2_content">
+                            <br/>
+                            <p>
+                              <span style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;"><t t-esc="s['phone']"/></span>
+                            </p>
+                            <p>
+                              <span style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">&amp;nbsp;</span>
+                              <font style="font-size: 14px;">&amp;nbsp;</font>
+                              <br/>
+                            </p>
+                          </section>
+                        </div>
+                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
+                          <section class="t_img_hover_1 te_img_effect3">
+                            <a href="#" data-original-title="" title="" aria-describedby="tooltip430556">
+                              <br/>
+                            </a>
+                          </section>
+
+                          <section class="te_4_col2_content">
+                            <span style="font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif;">
+                              <font style="font-size: 14px;">&amp;nbsp;</font>
+                            </span>
+                            <span style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; text-transform: none;"/>
+                            <p style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif;">
+                              <font style="font-size: 14px;"><t t-esc="s['planta_id'].name"/> - Local <t t-esc="s['local_id'].name"/></font>
+                            </p>
+                          </section>
+                        </div>
+                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
+                          <section class="t_img_hover_1 te_img_effect3">
+                            <a href="#" data-original-title="" title="" aria-describedby="tooltip80963">
+                              <br/>
+                            </a>
+                          </section>
+                          <section class="te_4_col2_content">
+                            <font style="font-size: 14px;">&amp;nbsp;</font>
+                            <p>
+                              <a t-attf-href="{{'/map?data_space='+str(s['local_id'].space)}}" data-original-title="" title="" aria-describedby="tooltip235884">
+                                <font style="font-size: 14px;">&amp;nbsp;Ver Mapa&amp;nbsp;</font>
+                              </a>
+                              <br/>
+                            </p>
+                            <div class="te_extra_btn">
+                              <a href="#" data-original-title="" title="" aria-describedby="tooltip866647">
+                                <font style="font-size: 14px;">&amp;nbsp;</font>
+                              </a>
+                            </div>
+                          </section>
+                        </div>
+                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
+                          <section class="t_img_hover_1 te_img_effect3">
+                            <a href="#" data-original-title="" title="" aria-describedby="tooltip80963">
+                              <br/>
+                            </a>
+                          </section>
+                          <section class="te_4_col2_content">
+                            <font style="font-size: 14px;">&amp;nbsp;</font>
+                            <p>
+                              <font style="font-size: 14px;"><t t-esc="s['name']"/></font>
+                            </p>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    </section>
+                    <t t-set="index" t-value="index +1"/>
+                  </t>
+                </t>
+                  </t>
+
+
+
+              </div>
+            </div>
+          </t>
+        </template>
+    </data>
+</odoo>

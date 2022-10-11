@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_binhex_shop_list_binhex_shop_list,binhex_shop_list.binhex_shop_list,model_binhex_shop_list_binhex_shop_list,base.group_user,1,1,1,1
