@@ -1,5 +1,31 @@
+.title_box {
+    padding: 10px 20px;
+    background: lightgoldenrodyellow;
+    width: fit-content;
+    margin: auto;
+}
+
+.content_title {
+    text-align: center;
+    font-weight: bold;
+}
+
 .center_content {
     display: flex;
     justify-content: center;
+    align-items: stretch;
+    flex-basis: 160px;
+}
+
+.center_text {
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+format_content {
+    color: rgb(33, 37, 41);
+    font-family: Rubik, "Odoo Unicode Support Noto", sans-serif;
+    font-size: 14px;
+    text-transform: none;
 }

@@ -4,26 +4,20 @@
     <template id="shops" name="shops">
       <t t-call="website.layout">
         <div id="wrap" class="carlos_danger_13">
-          <div class="oe_structure">
+          <div class="oe_structure" style="margin-bottom:50px;">
             <div class="oe_structure oe_empty" data-name="Style 2" data-editor-message="ARRASTRE BLOQUES AQUÍ"/>
             <div class="oe_structure" data-name="Style 1" data-editor-message="ARRASTRE BLOQUES AQUÍ">
               <div class="container pt32" data-name="Category Slider">
-                <h3 class="te_slider_title">Categories</h3>
+                <h3 class="te_slider_title">Categories associated with the part-time work these members do in our Company</h3>
               </div>
               <section class="te_category_slider pb32" style=""/>
             </div>
 
             <t t-foreach="categorias" t-as="categoria">
               <section class="py-3 py-sm-5 te_space_style pt0" data-name="Space"/>
-              <section class="aos-init zoom-in pb72" data-name="Title" data-aos="zoom-in" t-attf-id="{{categoria.id}}" data-anchor="true">
-                <div class="container">
-                  <div class="row s_nb_column_fixed">
-                    <div class="col-lg-12 s_title pt16 bg-alpha" style="text-align: center;">
-                      <h4 class="te_s_title_default">
-                        <t t-esc="categoria.name"/>
-                      </h4>
-                    </div>
-                  </div>
+              <section class="aos-init zoom-in pb24" data-name="Title" data-aos="zoom-in" t-attf-id="{{categoria.id}}" data-anchor="true">
+                <div class="title_box">
+                  <h4 t-esc="categoria.name"/>
                 </div>
               </section>
               <t t-set="index" t-value="0"/>
@@ -47,25 +41,28 @@
                             </a>
                           </section>
                         </div>
-                        <div class="col-sm-4 border col-lg-2" t-att-style="style">
+                        <div class="col-sm-4 border col-lg-2 center_text" t-att-style="style">
                           <section class="te_4_col2_content">
-                              <div style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
-                                <t t-esc="contacto['phone']"/>
-                              </div>
+                            <div class="format_content">
+                              <div class="content_title">Name</div>
+                              <t t-esc="contacto['name']"/>
+                            </div>
                           </section>
                         </div>
-                        <div class="col-sm-4 border col-lg-2" t-att-style="style">
+                        <div class="col-sm-4 border col-lg-2 center_text" t-att-style="style">
                           <section class="te_4_col2_content">
-                              <div style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
-                                <t t-esc="contacto['job']"/>
-                              </div>
+                            <div class="format_content">
+                              <div class="content_title">Phone number</div>
+                              <t t-esc="contacto['phone']"/>
+                            </div>
                           </section>
                         </div>
-                        <div class="col-sm-4 border col-lg-2" t-att-style="style">
+                        <div class="col-sm-4 border col-lg-2 center_text" t-att-style="style">
                           <section class="te_4_col2_content">
-                              <div style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
-                                <t t-esc="contacto['name']"/>
-                              </div>
+                            <div class="format_content">
+                              <div class="content_title">Job Position</div>
+                              <t t-esc="contacto['job']"/>
+                            </div>
                           </section>
                         </div>
                       </div>
