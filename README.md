@@ -1,4 +1,4 @@
-# binhex_shop_list
+# The Binhex Shop
 It creates the web page "/contacs" to show the demo contacts under their categories.
 
 # Description
