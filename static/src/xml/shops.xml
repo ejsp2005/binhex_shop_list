@@ -19,9 +19,8 @@
                 <div class="container">
                   <div class="row s_nb_column_fixed">
                     <div class="col-lg-12 s_title pt16 bg-alpha" style="text-align: center;">
-                      <h1>ERNESTO</h1>
-                      <h4 class="te_s_title_default">ERNESTO
-                        <!-- <t t-esc="categoria.name"/> -->
+                      <h4 class="te_s_title_default">
+                        <t t-esc="categoria.name"/>
                       </h4>
                     </div>
                   </div>
