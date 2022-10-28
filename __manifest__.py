@@ -32,9 +32,9 @@
         'views/res_partner.xml',
     ],
     # only loaded in demonstration mode
-    # 'demo': [
-    #     'demo/demo.xml',
-    # ],
+    'demo': [
+        'demo/demo.xml',
+    ],
 
     # Se elimino la dependencia 'maps' que no es necesaria
 }

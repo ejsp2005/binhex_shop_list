@@ -1,30 +1,39 @@
 <odoo>
-    <data>
-<!--
-          <record id="object0" model="binhex_shop_list.binhex_shop_list">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+  <data noupdate="1">
 
-          <record id="object1" model="binhex_shop_list.binhex_shop_list">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+    <!-- =======================================================================
+                                        res.partners
+         ======================================================================= -->
 
-          <record id="object2" model="binhex_shop_list.binhex_shop_list">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="binhex_shop_list.binhex_shop_list">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="binhex_shop_list.binhex_shop_list">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
-    </data>
+    <record id="base.res_partner_address_15" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_desks"/>
+    </record>
+    <record id="base.res_partner_address_16" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_desks_components"/>
+    </record>
+    <record id="base.res_partner_address_31" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_desks_components"/>
+    </record>
+    <record id="base.res_partner_address_3" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_furnitures_chairs"/>
+    </record>
+    <record id="base.res_partner_address_4" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_furnitures_couches"/>
+    </record>
+    <record id="base.res_partner_address_10" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_desks"/>
+    </record>
+    <record id="base.res_partner_address_11" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_furnitures_couches"/>
+    </record>
+    <record id="base.res_partner_address_28" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_furnitures_couches"/>
+    </record>
+    <record id="base.res_partner_address_25" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_cabinets"/>
+    </record>
+    <record id="base.res_partner_address_27" model="res.partner">
+      <field name="partnercat_id" ref="website_sale.public_category_cabinets"/>
+    </record>
+  </data>
 </odoo>
