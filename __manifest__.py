@@ -28,6 +28,7 @@
     'data': [
         'security/ir.model.access.csv',
         'static/src/xml/shops.xml',
+        'static/src/xml/assets.xml',
         'views/res_partner.xml',
     ],
     # only loaded in demonstration mode

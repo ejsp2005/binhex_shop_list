@@ -8,7 +8,7 @@
             <div class="oe_structure oe_empty" data-name="Style 2" data-editor-message="ARRASTRE BLOQUES AQUÍ"/>
             <div class="oe_structure" data-name="Style 1" data-editor-message="ARRASTRE BLOQUES AQUÍ">
               <div class="container pt32" data-name="Category Slider">
-                <h3 class="te_slider_title">Categorías</h3>
+                <h3 class="te_slider_title">Categories</h3>
               </div>
               <section class="te_category_slider pb32" style=""/>
             </div>
@@ -33,97 +33,39 @@
                   <t t-if="(index % 2) == 0">
                     <t t-set="style" t-value="'background-color: rgb(206, 222, 231);'" />
                   </t>
-                  <section class="zoom-in aos-init" data-name="Title" data-aos="zoom-in">
-                    <div class="container">
-                      <div class="row s_nb_column_fixed"></div>
-                    </div>
-                  </section>
+                  <t t-else="">
+                    <t t-set="style" t-value="'background-color: rgb(233, 237, 239);'" />
+                  </t>
+
                   <section class="aos-init pt0 fade-right pb4" data-name="Style 4" style="" data-aos="fade-right">
                     <div class="container">
-
-                      <div class="row te_col_6_main">
-
-                        <div class="col-sm-6 col-lg-3 aos-init border" data-aos="none" t-att-style="style">
+                      <div class="row center_content" style="margin: auto;">
+                        <div class="col-sm-4 col-lg-3 aos-init border" data-aos="none" t-att-style="style">
                           <section class="t_img_hover_1">
                             <a href="#" data-original-title="" title="" aria-describedby="tooltip934969">
-                              <img class="img img-responsive img-fluid d-block mx-auto" alt="" t-attf-src="{{'/web/image?model=res.partner&amp;id='+str(contacto['id'])+'&amp;field=image_128&amp;'}}" data-original-title="" title="" aria-describedby="tooltip775951" style="width: 50%;"/>
+                              <img class="img img-responsive img-fluid d-block mx-auto" alt="" t-attf-src="{{'/web/image?model=res.partner&amp;id='+str(contacto['id'])+'&amp;field=image_128&amp;'}}" data-original-title="" title="" aria-describedby="tooltip775951" style="width: 50%; height:auto;"/>
                             </a>
                           </section>
                         </div>
-                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
-                          <section class="t_img_hover_1 te_img_effect3">
-                            <a href="#" data-original-title="" title="" aria-describedby="tooltip315079">
-                              <br/>
-                            </a>
-                          </section>
-
+                        <div class="col-sm-4 border col-lg-2" t-att-style="style">
                           <section class="te_4_col2_content">
-                            <br/>
-                            <p>
-                              <span style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
+                              <div style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
                                 <t t-esc="contacto['phone']"/>
-                              </span>
-                            </p>
-                            <p>
-                              <span style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">&amp;nbsp;</span>
-                              <font style="font-size: 14px;">&amp;nbsp;</font>
-                              <br/>
-                            </p>
+                              </div>
                           </section>
                         </div>
-                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
-                          <section class="t_img_hover_1 te_img_effect3">
-                            <a href="#" data-original-title="" title="" aria-describedby="tooltip430556">
-                              <br/>
-                            </a>
-                          </section>
-                          <!-- <section class="te_4_col2_content">
-                            <span style="font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif;">
-                              <font style="font-size: 14px;">&amp;nbsp;</font>
-                            </span>
-                            <span style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; text-transform: none;"/>
-                            <p style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif;">
-                              <font style="font-size: 14px;">
-                                <t t-esc="contacto['planta_id'].name"/>
-                                    - Local <t t-esc="contacto['local_id'].name"/>
-                              </font>
-                            </p>
-                          </section> -->
-                        </div>
-                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
-                          <section class="t_img_hover_1 te_img_effect3">
-                            <a href="#" data-original-title="" title="" aria-describedby="tooltip80963">
-                              <br/>
-                            </a>
-                          </section>
-                          <!-- <section class="te_4_col2_content">
-                            <font style="font-size: 14px;">&amp;nbsp;</font>
-                            <p>
-                              <a t-attf-href="{{'/map?data_space='+str(contacto['local_id'].space)}}" data-original-title="" title="" aria-describedby="tooltip235884">
-                                <font style="font-size: 14px;">&amp;nbsp;Ver Mapa&amp;nbsp;</font>
-                              </a>
-                              <br/>
-                            </p>
-                            <div class="te_extra_btn">
-                              <a href="#" data-original-title="" title="" aria-describedby="tooltip866647">
-                                <font style="font-size: 14px;">&amp;nbsp;</font>
-                              </a>
-                            </div>
-                          </section> -->
-                        </div>
-                        <div class="col-sm-6 border col-lg-2" t-att-style="style">
-                          <section class="t_img_hover_1 te_img_effect3">
-                            <a href="#" data-original-title="" title="" aria-describedby="tooltip80963">
-                              <br/>
-                            </a>
-                          </section>
+                        <div class="col-sm-4 border col-lg-2" t-att-style="style">
                           <section class="te_4_col2_content">
-                            <font style="font-size: 14px;">&amp;nbsp;</font>
-                            <p>
-                              <font style="font-size: 14px;">
+                              <div style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
+                                <t t-esc="contacto['job']"/>
+                              </div>
+                          </section>
+                        </div>
+                        <div class="col-sm-4 border col-lg-2" t-att-style="style">
+                          <section class="te_4_col2_content">
+                              <div style="color: rgb(33, 37, 41); font-family: Rubik, &quot;Odoo Unicode Support Noto&quot;, sans-serif; font-size: 14px; text-transform: none;">
                                 <t t-esc="contacto['name']"/>
-                              </font>
-                            </p>
+                              </div>
                           </section>
                         </div>
                       </div>

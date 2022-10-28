@@ -1,8 +1,0 @@
-<odoo>
-    <data>
-        <template id="assets_frontend" name="web_assets" inherit_id="web.assets_frontend">
-            <xpath expr="." position="inside">
-             </xpath> 
-        </template>
-    </data>
-</odoo>

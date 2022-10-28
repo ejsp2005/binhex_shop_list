@@ -15,7 +15,7 @@ class BinhexShopList(http.Controller):
                 'id': contacto.id,
                 'name': contacto.name,
                 'phone': contacto.phone,
-                'mobile': contacto.mobile
+                'job': contacto.function
             }
             if contacto.partnercat_id:
                 partnercat_id = contacto.partnercat_id[0].id
