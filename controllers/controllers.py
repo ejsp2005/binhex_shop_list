@@ -1,39 +1,38 @@
 # -*- coding: utf-8 -*-
-from odoo import http
-import logging
-_logger = logging.getLogger(__name__)
+# import logging
+# _logger = logging.getLogger(__name__)
 
-from odoo.addons.portal.controllers.web import Home
+# from odoo.addons.portal.controllers.web import Home
+# from asyncio.windows_events import NULL
 from odoo import http
-from odoo.http import request
+# from odoo.http import request
 
 class BinhexShopList(http.Controller):
-     @http.route('/shops', auth='public',website=True)
+     @http.route('/contacts', auth='public', website=True)
      def index(self, **kw):
-         shops = http.request.env['res.partner'].sudo().search([('planta_id','!=',False)])
-         categories_ids = []
-         shops_list = []
+        contactos = http.request.env['res.partner'].sudo().search([('partnercat_id',"!=", False)])
+        categorias_id = []
+        shop_list = []
 
-         for s in shops:
-             t_aux = {
-                'id': s.id,
-                'name': s.name,
-                'horario': s.horario,
-                'planta_id': s.planta_id,
-                'local_id': s.local_id,
-                'phone': s.phone,
-                'mobile': s.mobile,
-             }
-             if s.categoria:
-                 if s.categoria[0].id not in categories_ids:
-                     categories_ids.append(s.categoria[0].id)
-                     t_aux.update({'categoria': s.categoria[0].id})
-                 else:
-                     t_aux.update({'categoria': s.categoria[0].id})
-             _logger.info("DEBBUG "+str(t_aux))
-             shops_list.append(t_aux)
+        i=0
+        for contacto in contactos:
+            contactdata = {
+                'id': contacto.id,
+                'name': contacto.name,
+                'phone': contacto.phone,
+                'mobile': contacto.mobile
+            }
+            if contacto.function:
+                if contacto.partnercat_id not in categorias_id:
+                    categorias_id.append(contacto.partnercat_id)
 
-         return http.request.render('binhex_shop_list.shops',{
-            'shops': shops_list,
-            'categories': http.request.env['product.public.category'].sudo().browse(categories_ids)
-         })
+                contactdata.update({'function': contacto.partnercat_id})
+            i+=1
+            # print("ERNESTO_DEBUG " + str(i) + ": " + str(contactdata))
+            shop_list.append(contactdata)
+
+        print("ERNESTO_DEBUG: "+str(categorias_id))
+        return http.request.render('binhex_shop_list.shops',{
+            'contactos': shop_list,
+            'categorias': http.request.env['product.public.category'].sudo().browse(categorias_id)
+        })
